@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 84px;
+  padding: 1em 1em 1em 0.6em;
+  color: white;
+  background: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topLogo {
+  padding-left: 50px;
+}
+
+select {
+  width: 6rem;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  background-color: black;
+  font-size: 1rem;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+
+.fa-sort-down {
+  color: white;
+}
+
+a {
+  text-decoration: "none";
+}
+
+.intro {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+#scroll {
+  color: aliceblue;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-arrow-down {
+  color: white;
+}
+
+.main1 {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  color: black;
+}
+
+.main2 {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.main3 {
+  height: 100vh;
+  width: 100vw;
+  background-color: #263238;
+  color: white;
+}
+
+#grid0 {
+  border: 5px solid pink;
+  border-radius: 1em;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 50em 2fr;
+  /* 1fr = 3fr 중 1분할 */
+}
+
+#grid1 {
+  border: 5px solid pink;
+  border-radius: 1em;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 50em 2fr;
+}
+
+#grid2 {
+  border: 5px solid pink;
+  border-radius: 1em;
+  background-color: skyblue;
+  display: grid;
+  grid-template-columns: 50em 2fr;
+}
+
+#grid3 {
+  border: 5px solid pink;
+  border-radius: 1em;
+  background-color: gray;
+  color: white;
+  display: grid;
+  grid-template-columns: 50em 2fr;
+}
+
+#grid4 {
+  border: 5px solid pink;
+  border-radius: 1em;
+  background-color: #b71c1c;
+  display: grid;
+  grid-template-columns: 50em 2fr;
+}
+
+.main4 {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: azure;
+}
+
+.main5 {
+  height: 30vh;
+  width: 100vw;
+  background-color: white;
+  color: black;
+}
+
+.main6 {
+  height: 50vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
