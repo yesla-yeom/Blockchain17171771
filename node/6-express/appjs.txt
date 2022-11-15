@@ -1,0 +1,24 @@
+import express from "express";
+
+const app = express();
+
+app.use(express.json());
+
+app.post("/", (req, res, next) => {
+  console.log(req.body);
+});
+
+// app.get("/sky/:id", (req, res, next) => {
+//   console.log(req.params);
+//   console.log(req.params.id);
+//   console.log(req.query);
+//   console.log(req.query.keyword);
+
+//   res.status(201).send("hihi!");
+//   res.setHeader("key", "value");
+// }); req~ res~
+// res는 순차적으로 처리됨
+
+app.listen(8000);
+
+// http://localhost:8000/sky/yena/?keyword=star
