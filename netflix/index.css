@@ -80,7 +80,7 @@ nav {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url(./dd.png);
+  background-image: url(./public/image/down.png);
   background-repeat: no-repeat;
   background-position: calc(100% - 1rem) center;
   background-size: 1rem;
@@ -248,7 +248,7 @@ video {
   font-size: 2em;
   color: white;
   border: none;
-  background-image: url(./chevron-right-solid.png);
+  background-image: url(./public/image/chevron-right-solid.png);
 
   background-repeat: no-repeat;
   background-position: calc(100% - 1em) center;
@@ -374,7 +374,7 @@ video {
   width: 31.5em;
   height: 45em;
   position: relative;
-  background-image: url(./bell.png);
+  background-image: url(./public/image/bell.png);
   background-repeat: no-repeat;
   background-position: calc(100% - 5rem) center;
   background-size: 5em;
@@ -732,7 +732,7 @@ ul > li {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url(./dd.png);
+  background-image: url(./public/image/down.png);
   background-repeat: no-repeat;
   background-position: calc(100% - 1rem) center;
   background-size: 1rem;
