@@ -1,0 +1,742 @@
+* {
+  font-family: "Gothic A1", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.smoothScroll {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 90%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginA {
+  width: 70px;
+  padding: 0.4rem;
+  border: 1px solid #e50914;
+  border-radius: 4px;
+  color: white;
+  background-color: #e50914;
+  font-size: 1rem;
+  font-family: inherit;
+  text-align: center;
+  position: absolute;
+  top: 1.8rem;
+  right: 4.5rem;
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8%;
+  padding: 1rem 0 0 0;
+  color: white;
+  background: transparent;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.active {
+  background: black;
+}
+
+.topLogo {
+  padding-left: 50px;
+}
+
+#lang {
+  width: 6rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  position: absolute;
+  top: 1.8rem;
+  right: 11.5rem;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  color: #fff;
+  background: transparent;
+  font-size: 0.9rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(./public/image/down.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1rem) center;
+  background-size: 1rem;
+}
+
+option {
+  background-color: #aaa;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.fa-sort-down {
+  color: white;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+video {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+  z-index: -10;
+  position: relative;
+}
+
+#scroll {
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.fa-arrow-down {
+  color: white;
+  z-index: 10;
+  opacity: 0.6;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: transform;
+  position: absolute;
+  top: 90%;
+  width: 30%;
+  text-align: center;
+}
+
+.fa-arrow-down:hover {
+  transform: translateY(1rem);
+  scroll-behavior: smooth;
+}
+
+#main1 {
+  width: 100%;
+  background-color: white;
+}
+
+.main-inner-box {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-inner-box > div,
+.main-inner-box img {
+  width: 50%;
+}
+.main-inner-box > div:nth-child(3) {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 160%;
+  width: 25%;
+}
+.main-inner-box img:first-child {
+  width: 500px;
+}
+
+.main-inner-box img:last-child {
+  width: 20%;
+  margin-bottom: 100px;
+}
+
+.enjoy {
+  padding: 6rem 0 3rem 1.2rem;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 130%;
+}
+
+.main2 {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  position: relative;
+}
+
+.main2item1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 28%;
+  left: 35%;
+  font-size: 4em;
+  font-weight: bolder;
+}
+
+.main2item2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 48.5%;
+  left: 29%;
+  font-size: 1.5em;
+}
+
+.main2item3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 55%;
+  left: 27%;
+  font-size: 1.2em;
+}
+
+.email {
+  justify-content: center;
+
+  height: 4em;
+  width: 30em;
+  font-size: 1em;
+  padding-left: 10px;
+}
+
+.submit {
+  justify-content: center;
+  text-align: center;
+  height: 2.15em;
+  width: 7em;
+  font-size: 2em;
+  color: white;
+  border: none;
+  background-image: url(./public/image/chevron-right-solid.png);
+
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1em) center;
+  background-size: 0.35em;
+  background-color: #f40612;
+}
+
+.emailSubmit {
+  position: absolute;
+  display: flex;
+  top: 60%;
+  left: 28%;
+}
+
+.concord-img {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.gradient {
+  content: "";
+  background: linear-gradient(to bottom right, black, transparent);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main3 {
+  height: 260vh;
+  width: 100vw;
+  background-color: #111111;
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 1.5rem;
+}
+
+#grid0 {
+  border: 1px solid white;
+  border-radius: 1em;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: black;
+  width: 65em;
+  height: 35em;
+  position: relative;
+  transition: transform 1s;
+}
+
+.main3item1 {
+  position: absolute;
+  top: 0.7em;
+  left: 0.8em;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 130%;
+}
+
+.main3img1 {
+  z-index: 3;
+  position: absolute;
+  top: 8em;
+  left: 40em;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.main3img2 {
+  z-index: 2;
+  position: absolute;
+  top: 14em;
+  left: 30em;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.main3img3 {
+  z-index: 1;
+  position: absolute;
+  top: 20em;
+  left: 20em;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.fa-n {
+  color: #b71c1c;
+}
+
+.main3item2 {
+  position: absolute;
+  top: 21em;
+  left: 2em;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 130%;
+}
+
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#grid1 {
+  border: 1px solid white;
+  border-radius: 1em;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: black;
+  width: 31.5em;
+  height: 45em;
+  position: relative;
+  background-image: url(./public/image/bell.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 5rem) center;
+  background-size: 5em;
+  transform: translateY(50px);
+  transition: transform 0.5s ease-out 0s;
+}
+
+.noticeimg {
+  border-radius: 10px;
+  position: absolute;
+  top: 26em;
+  left: 5.5em;
+  width: 15em;
+  transition: 0.3s;
+}
+
+.grid1item1 {
+  position: absolute;
+  top: 0.7em;
+  left: 0.8em;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 130%;
+}
+
+#grid2 {
+  border: 1px solid #80b7f4;
+  border-radius: 1em;
+  background-color: #80b7f4;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: black;
+  width: 31.5em;
+  height: 45em;
+  position: relative;
+  cursor: pointer;
+  transform: translateY(50px);
+  transition: transform 0.5s ease-out 0s;
+}
+
+.grid2item1 {
+  position: absolute;
+  top: 0.5em;
+  left: 0.7em;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 130%;
+}
+
+.kidimg {
+  position: absolute;
+  top: 26.5em;
+  left: 17.5em;
+  width: 12em;
+}
+
+#grid2:hover .grid2item1,
+#grid2:hover .kidimg {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.text-hover {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 170%;
+}
+
+#grid2:hover > .text-hover {
+  display: block;
+}
+
+.text-hover {
+  display: none;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#grid3 {
+  border: 1px solid #34383b;
+  border-radius: 1em;
+  background-color: #34383b;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  width: 31.5em;
+  height: 45em;
+  position: relative;
+  cursor: pointer;
+  transform: translateY(50px);
+  transition: transform 0.5s ease-out 0s;
+}
+
+#grid3:hover .grid3item1,
+#grid3:hover .onlytoall,
+#grid3:hover .onlyonb,
+#grid3:hover .onlysquid {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+#grid3:hover > .img-hover {
+  display: block;
+}
+
+.grid3item1 {
+  position: absolute;
+  top: 0.5em;
+  left: 0.7em;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 130%;
+  z-index: 0;
+}
+
+.img-hover {
+  position: absolute;
+  top: 13em;
+  left: 3em;
+  width: 80%;
+  display: none;
+  z-index: 10;
+}
+
+.img-hover:hover {
+  display: block;
+  opacity: 1;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.onlytoall {
+  position: absolute;
+  top: 24em;
+  left: 8em;
+  width: 65%;
+}
+
+.onlyonb {
+  position: absolute;
+  top: 34.5em;
+  left: 3em;
+  width: 50%;
+}
+
+.onlysquid {
+  position: absolute;
+  top: 28em;
+  left: 14em;
+  width: 65%;
+}
+
+#grid4 {
+  border: 1px solid #b71c1c;
+  border-radius: 1em;
+  background-color: #b71c1c;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 31.5em;
+  height: 45em;
+  position: relative;
+  transform: translateY(50px);
+  transition: transform 0.5s ease-out 0s;
+}
+
+.grid4item1 {
+  padding: 1.8rem 0 3rem 1.1rem;
+  margin: 0;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 130%;
+  position: absolute;
+  top: 0;
+  left: 0.3em;
+}
+
+.grid4item2 {
+  position: absolute;
+  top: 18em;
+  left: 1.4em;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-size: 2em;
+  line-height: 160%;
+  transition: 0.5s;
+}
+
+.main4 {
+  height: 70vh;
+  width: 100vw;
+  background-image: url(./public/image/fourth_section_bg.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.light_netf {
+  position: absolute;
+  top: 10%;
+  left: 23.2%;
+  width: 62.5em;
+}
+
+.main5 {
+  height: 35vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  position: relative;
+  border-bottom: 8px solid #222;
+}
+
+.main5item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 24%;
+  font-size: 1.4em;
+}
+
+.emailSubmit2 {
+  position: absolute;
+  display: flex;
+  top: 46%;
+  left: 28%;
+}
+
+.fa-angle-right {
+  color: white;
+}
+
+.main6 {
+  height: 60vh;
+  width: 72%;
+  background-color: black;
+  position: absolute;
+  left: 18%;
+  display: flex;
+  color: white;
+  opacity: 0.5;
+}
+
+.main6item1 {
+  position: absolute;
+  top: 15%;
+  left: 5.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.tel {
+  text-decoration: none;
+  color: white;
+  opacity: 0.9;
+}
+
+.main6item2 {
+  position: absolute;
+  top: 21%;
+  left: 5em;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.9em;
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.9;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 0;
+}
+
+ul > li {
+  font-size: 0.9em;
+  opacity: 0.9;
+  display: inline;
+  width: 25%;
+}
+
+.main6item3 {
+  position: absolute;
+  top: 52%;
+  left: 5.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main6item4 {
+  position: absolute;
+  top: 66%;
+  left: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  opacity: 0.9;
+}
+
+.main6item5 {
+  position: absolute;
+  top: 72.5%;
+  left: 7.5em;
+  width: 70vw;
+  font-size: 0.75em;
+  opacity: 0.9;
+}
+
+#lang2 {
+  width: 8rem;
+  padding: 1.1rem;
+  border: 0.5px solid rgb(123, 121, 121);
+  border-radius: 2px;
+  color: #fff;
+  background: transparent;
+  font-size: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(./public/image/down.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1rem) center;
+  background-size: 1rem;
+}

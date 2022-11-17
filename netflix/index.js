@@ -1,83 +1,49 @@
-const nav = document.querySelector("nav");
-const navHeight = nav.getBoundingClientRect().height;
+// 서버
+const express = require("express");
+const session = require("express-session");
+const morgan = require("morgan");
+const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
+const path = require("path");
+const routes = require("./routes/index.js");
 
-document.addEventListener("scroll", () => {
-  if (window.scrollY > navHeight) {
-    nav.classList.add("active");
-  } else {
-    nav.classList.remove("active");
-  }
+dotenv.config();
+
+const app = express();
+
+app.set("port", process.env.PORT || 8080);
+
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV == "production") morgan("combined")(req, res, next);
+  else morgan("dev")(req, res, next);
 });
 
-//
+app.use("/", express.static(path.join(__dirname, "public")));
 
-window.addEventListener("scroll", function () {
-  console.log(scrollY);
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+app.use(cookieParser(process.env.COOKIE_SECRET));
+
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.COOKIE_SECRET,
+    cookie: {
+      httpOnly: true,
+      secure: false,
+    },
+    name: "JLP",
+  })
+);
+
+app.use("/", (req, res, next) => {
+  console.log(req.body);
+  next();
 });
+app.use("/api", routes);
 
-//
-
-let grid0 = document.getElementById("grid0");
-let main3img1 = document.querySelector(".main3img1");
-let main3img2 = document.querySelector(".main3img2");
-let main3img3 = document.querySelector(".main3img3");
-let grid1 = document.getElementById("grid1");
-let grid2 = document.getElementById("grid2");
-let grid3 = document.getElementById("grid3");
-let grid4 = document.getElementById("grid4");
-let noticeimg = document.querySelector(".noticeimg");
-let grid4item2 = document.querySelector(".grid4item2");
-
-document.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-
-  if (window.scrollY > 3520) {
-    grid4.style.transform = "translateY(-60px)";
-    setTimeout(function () {
-      grid4item2.style.transform = "translateY(-60px)";
-    }, 500);
-  } else {
-    grid4.style.transform = "translateY(0)";
-    grid4item2.style.transform = "translateY(0)";
-  }
-
-  if (window.scrollY > 3520) {
-    grid3.style.transform = "translateY(-60px)";
-  } else {
-    grid3.style.transform = "translateY(0)";
-  }
-
-  if (window.scrollY > 2780) {
-    grid2.style.transform = "translateY(-60px)";
-  } else {
-    grid2.style.transform = "translateY(0)";
-  }
-
-  if (window.scrollY > 2780) {
-    grid1.style.transform = "translateY(-60px)";
-    setTimeout(function () {
-      noticeimg.style.transform = "translateY(-60px)";
-    }, 300);
-  } else {
-    grid1.style.transform = "translateY(0)";
-    noticeimg.style.transform = "translateY(0)";
-  }
-
-  if (window.scrollY > 2200) {
-    grid0.style.transform = "translateY(-60px)";
-    setTimeout(function () {
-      main3img1.style.transform = "translateY(-60px)";
-    }, 100);
-    setTimeout(function () {
-      main3img2.style.transform = "translateY(-60px)";
-    }, 100);
-    setTimeout(function () {
-      main3img3.style.transform = "translateY(-60px)";
-    }, 100);
-  } else {
-    grid0.style.transform = "translateY(0)";
-    main3img1.style.transform = "translateY(0)";
-    main3img2.style.transform = "translateY(0)";
-    main3img3.style.transform = "translateY(0)";
-  }
+app.listen(app.get("port"), () => {
+  console.log("가원, 혜림, 정현! 뽀에버");
 });

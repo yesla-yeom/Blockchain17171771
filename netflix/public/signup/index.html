@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup.css" lo />
+    <title>회원가원</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <form id="signup">
+      <div id="signup-id">ID</div>
+      <div>
+        <input id="signup-id-input" type="text" placeholder="ID를 입력하세요" />
+      </div>
+
+      <div id="signup-pw">PW</div>
+      <div>
+        <input
+          id="signup-pw-input"
+          type="password"
+          placeholder="PW를 입력하세요"
+        />
+      </div>
+
+      <div id="signup-name">이름</div>
+      <div>
+        <input
+          id="signup-name-input"
+          type="text"
+          placeholder="이름을 입력하세요"
+        />
+      </div>
+
+      <div id="signup-email">E-mail</div>
+      <div>
+        <input
+          id="signup-email-input"
+          type="email"
+          placeholder="이메일주소를 입력하세요"
+        />
+      </div>
+      <button id="signup-btn">가입하기</button>
+    </form>
+    <script src="signup.js"></script>
+  </body>
+</html>
