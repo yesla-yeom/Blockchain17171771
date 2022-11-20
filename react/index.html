@@ -2,33 +2,32 @@
 <html lang="ko">
   <body>
     <div id="root"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      function App() {
+        const [counter, setCounter] = React.useState(0);
+        const onClick = () => {
+          setCounter(counter + 1);
+        };
+        return (
+          <div>
+            <h3>Total clicks: {counter}</h3>
+            <button onClick={onClick}>Click me</button>
+          </div>
+        );
+      }
+
+      ReactDom.render(<App />, root);
+      // const container = React.createElement("div", null, h3, btn);
+    </script>
   </body>
-  <script
-    src="https://unpkg.com/react@18/umd/react.development.js"
-    crossorigin
-  ></script>
-  <script
-    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    crossorigin
-  ></script>
-  <script>
-    const root = document.getElementById("root");
-    const h3 = React.createElement(
-      "h3",
-      { id: "title", onMouseEnter: () => console.log("mouse enter") },
-      "Hello I'm a span"
-    );
-    const btn = React.createElement(
-      "button",
-      {
-        onClick: () => console.log("I'm clicked"),
-        style: {
-          backgroundColor: "tomato",
-        },
-      },
-      "Click me"
-    );
-    const container = React.createElement("div", null, h3, btn);
-    ReactDOM.render(container, root);
-  </script>
 </html>
