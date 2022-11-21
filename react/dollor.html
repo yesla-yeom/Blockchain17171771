@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Won to Dollor</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        const [won, setWon] = React.useState(0);
+
+        const onChange = (event) => {
+          setWon(event.target.value);
+        };
+        const reset = () => setMinutes(0);
+
+        return;
+        <div>
+          <h1 className="h1">Won/dollor Converter</h1>
+          <input value={won} id="won" type="number" onChange={onChange} />
+          <h4>money money money</h4>
+          <input value={Math.floor(won / 1440)} id="dollor" type="number" />
+
+          <button onChange={reset}>Reset</button>
+        </div>;
+      }
+      const root = document.getElementById("root");
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>
