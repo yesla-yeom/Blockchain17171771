@@ -32,6 +32,11 @@ popUpRefresh.addEventListener("click", () => {
   hidePopUp();
 });
 
+function showTimerAndScore() {
+  gameTimer.style.visibility = "visible";
+  gameScore.style.visibility = "visible";
+}
+
 function startGame() {
   started = true;
   initGame();
@@ -65,11 +70,6 @@ function hideGameButton() {
   gameBtn.style.visibility = "hidden";
 }
 
-function showTimerAndScore() {
-  timerIndicator.style.visibility = "visible";
-  gameScore.style.visibility = "visible";
-}
-
 function startGameTimer() {
   let remainingTimeSec = GAME_DURATION_SEC;
   undateTimerText(remainingTimeSec);
@@ -90,7 +90,7 @@ function stopGameTimer() {
 function undateTimerText(time) {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
-  timerIndicator.innerText = `${minutes}:${seconds}`;
+  gameTimer.innerText = `${minutes}:${seconds}`;
 }
 
 function showPopUpWithText(text) {

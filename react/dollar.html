@@ -24,17 +24,18 @@
         const onChange = (event) => {
           setWon(event.target.value);
         };
-        const reset = () => setMinutes(0);
+        const reset = () => setWon(0);
 
-        return;
-        <div>
-          <h1 className="h1">Won/dollor Converter</h1>
-          <input value={won} id="won" type="number" onChange={onChange} />
-          <h4>money money money</h4>
-          <input value={Math.floor(won / 1440)} id="dollor" type="number" />
+        return (
+          <div>
+            <h1 className="h1">Won/dollar Converter</h1>
+            <input value={won} id="won" type="number" onChange={onChange} />
+            <h4>money money money</h4>
+            <input value={Math.floor(won / 1340)} id="dollar" type="number" />
 
-          <button onChange={reset}>Reset</button>
-        </div>;
+            <button onChange={reset}>Reset</button>
+          </div>
+        );
       }
       const root = document.getElementById("root");
       ReactDOM.render(<App />, root);
