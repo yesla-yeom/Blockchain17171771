@@ -1,44 +1,66 @@
-.App {
-  text-align: center;
+body {
+  width: 500px;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.inputbox {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #f1f3f5;
+  padding: 10px;
+  height: 50px;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputbox:focus {
+  outline: none;
+}
+
+.input_add {
+  border: 1px dashed skyblue;
+  background-color: #d0ebff;
+  color: #1c7ed6;
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
+}
+
+.input_reset {
+  border: 1px dashed skyblue;
+  background-color: #d0ebff;
+  color: #1c7ed6;
+  height: 50px;
+  width: 50px;
+  font-weight: bold;
 }
 
 .itemBox {
-  border: 1px solid black;
-  width: 500px;
-  height: 100px;
+  display: flex;
+  position: relative;
+  border: 1px dashed #1c7ed6;
+  background-color: #d0ebff;
+  color: black;
+  height: 50px;
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  position: absolute;
+  left: 450px;
+  border: 1px dashed skyblue;
+  background-color: #d0ebff;
+  color: #1c7ed6;
+  width: 40px;
+  padding: 5px 0;
+  top: 2.2em;
+  font-weight: bold;
 }

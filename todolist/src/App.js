@@ -14,19 +14,27 @@ function App() {
   const reset = () => setInputValue("");
 
   return (
-    <div>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(event) => {
-          setInputValue(event.target.value);
-        }}
-      />
-      <button onClick={addItem}>추가</button>
-      <button onClick={reset}>Reset</button>
-
-      <TodoBoard todoList={todoList} />
-    </div>
+    <>
+      <div className="input">
+        <input
+          type="text"
+          className="inputbox"
+          value={inputValue}
+          onChange={(event) => {
+            setInputValue(event.target.value);
+          }}
+        />
+        <button className="input_add" onClick={addItem}>
+          추가
+        </button>
+        <button className="input_reset" onClick={reset}>
+          Reset
+        </button>
+      </div>
+      <div>
+        <TodoBoard todoList={todoList}></TodoBoard>
+      </div>
+    </>
   );
 }
 
