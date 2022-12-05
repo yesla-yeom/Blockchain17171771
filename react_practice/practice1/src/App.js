@@ -75,13 +75,16 @@ const TempThead = styled.thead`
     border: 1px solid black;
     background-image: url(${image});
     background-repeat: no-repeat;
-    background-position: 90% 10%;
+    background-position: right 5px bottom 5px;
     width: 120px;
     &:first-child {
       width: 80px;
     }
     &:nth-child(2) {
       width: 80px;
+    }
+    &:nth-child(5) {
+      width: 70px;
     }
   }
 `;
