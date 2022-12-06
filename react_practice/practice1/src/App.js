@@ -5,52 +5,54 @@ import image from "./sort-down-solid.svg";
 
 function Practice() {
   return (
-    <KingDiv>
-      <TempTable>
-        <TempThead>
-          <tr>
-            <TempTh className="firstRow">
-              월<div className="svg"></div>
-            </TempTh>
-            <TempTh className="firstRow">
-              일자<div></div>
-            </TempTh>
-            <TempTh className="firstRow">
-              지출항목<div></div>
-            </TempTh>
-            <TempTh className="firstRow">상세항목</TempTh>
-            <TempTh className="firstRow">금액</TempTh>
-            <TempTh className="firstRow">비고</TempTh>
-          </tr>
-        </TempThead>
-        <TempTbody>
-          <tr>
-            <TempTd className="secondRow">11</TempTd>
-            <TempTd className="secondRow">10</TempTd>
-            <TempTd className="secondRow">식비</TempTd>
-            <TempTd className="secondRow">떡볶이</TempTd>
-            <TempTd className="secondRow">₩3,000</TempTd>
-            <TempTd className="secondRow"></TempTd>
-          </tr>
-          <tr>
-            <TempTd className="thirdRow"></TempTd>
-            <TempTd className="thirdRow">15</TempTd>
-            <TempTd className="thirdRow">통신비</TempTd>
-            <TempTd className="thirdRow">휴대폰 요금</TempTd>
-            <TempTd className="thirdRow">₩11,800</TempTd>
-            <TempTd className="thirdRow">알뜰폰으로 바꿈</TempTd>
-          </tr>
-          <tr>
-            <TempTd className="fthRow"></TempTd>
-            <TempTd className="fthRow">20</TempTd>
-            <TempTd className="fthRow">생활비</TempTd>
-            <TempTd className="fthRow">용돈</TempTd>
-            <TempTd className="fthRow">₩10,000</TempTd>
-            <TempTd className="fthRow"></TempTd>
-          </tr>
-        </TempTbody>
-      </TempTable>
-    </KingDiv>
+    <>
+      <KingDiv>
+        <TempTable>
+          <TempThead>
+            <tr>
+              <TempTh className="firstRow">
+                월<div className="svg"></div>
+              </TempTh>
+              <TempTh className="firstRow">
+                일자<div></div>
+              </TempTh>
+              <TempTh className="firstRow">
+                지출항목<div></div>
+              </TempTh>
+              <TempTh className="firstRow">상세항목</TempTh>
+              <TempTh className="firstRow">금액</TempTh>
+              <TempTh className="firstRow">비고</TempTh>
+            </tr>
+          </TempThead>
+          <TempTbody>
+            <tr>
+              <TempTd className="secondRow">11</TempTd>
+              <TempTd className="secondRow">10</TempTd>
+              <TempTd className="secondRow">식비</TempTd>
+              <TempTd className="secondRow">떡볶이</TempTd>
+              <TempTd className="secondRow">₩3,000</TempTd>
+              <TempTd className="secondRow"></TempTd>
+            </tr>
+            <tr>
+              <TempTd className="thirdRow"></TempTd>
+              <TempTd className="thirdRow">15</TempTd>
+              <TempTd className="thirdRow">통신비</TempTd>
+              <TempTd className="thirdRow">휴대폰 요금</TempTd>
+              <TempTd className="thirdRow">₩11,800</TempTd>
+              <TempTd className="thirdRow">알뜰폰으로 바꿈</TempTd>
+            </tr>
+            <tr>
+              <TempTd className="fthRow"></TempTd>
+              <TempTd className="fthRow">20</TempTd>
+              <TempTd className="fthRow">생활비</TempTd>
+              <TempTd className="fthRow">용돈</TempTd>
+              <TempTd className="fthRow">₩10,000</TempTd>
+              <TempTd className="fthRow"></TempTd>
+            </tr>
+          </TempTbody>
+        </TempTable>
+      </KingDiv>
+    </>
   );
 }
 
@@ -181,3 +183,6 @@ const TempTbody = styled.tbody`
 const TempTd = styled.td`
   color: brown;
 `;
+
+//
+//
