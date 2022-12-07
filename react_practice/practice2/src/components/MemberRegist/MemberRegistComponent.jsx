@@ -29,7 +29,7 @@ export default MemberRegistComponent;
 
 const MemberRegistBox = styled.div`
   margin-top: 5%;
-  width: 30vw;
+  width: 100%;
   background-color: aliceblue;
   display: flex;
   flex-direction: column;

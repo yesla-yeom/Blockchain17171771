@@ -45,7 +45,7 @@ const BeforeLogInComponent = ({ logInClick }) => {
 export default BeforeLogInComponent;
 
 const BeforeLogInBox = styled.div`
-  width: 15vw;
+  width: 18%;
   background-color: aliceblue;
 
   & .logInRow {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import chevronright from "./chevron-right-solid.svg";
 
 const AfterLogInComponent = () => {
   return (
@@ -9,7 +10,7 @@ const AfterLogInComponent = () => {
           <button className="logOutBtn">로그아웃</button>
         </div>
         <div className="afterLogInDiv2">
-          <div className="goResume">이력서 관리 ></div>
+          <div className="goResume">이력서 관리</div>
           <div className="modifiedDate">최종 수정일 (2022.07.18)</div>
         </div>
         <div className="afterLogInDiv3">
@@ -27,7 +28,7 @@ export default AfterLogInComponent;
 
 const AfterLogInBox = styled.div`
   margin-top: 50px;
-  width: 15vw;
+  width: 18%;
   background-color: #fafafa;
 
   & .afterLogInDiv1 {
@@ -47,8 +48,13 @@ const AfterLogInBox = styled.div`
   }
   & .goResume {
     cursor: pointer;
+    width: 100px;
     font-size: 12px;
     color: #2e9afe;
+    background-image: url(${chevronright});
+    background-repeat: no-repeat;
+    background-size: 6px;
+    background-position: right 10px bottom 13px;
   }
   & .modifiedDate {
     font-size: 6px;
